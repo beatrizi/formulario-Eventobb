@@ -11,4 +11,22 @@ function evento(eventoInput) {
     parrafo.textContent = eventoInput.target.value;
 }
 
+// -----------------
+const cuadro = document.getElementById("cuadroColor")
+//mouseenter (cada vez que pasa el mouse encima del evento se activa)
+cuadro.addEventListener("mouseenter", cambiaEntrando)
+// input.addEventListener('change', evento)
 
+function cambiaEntrando() {
+    //cada vez que el mouse entra cambiamos de color
+    cuadro.style.backgroundColor="pink";
+
+}
+
+//cuando el mouse salga del cuadrado volvera a estar amarillo
+cuadro.addEventListener('mouseleave',cambiaSalir)
+
+function cambiaSalir() {
+    cuadro.style.backgroundColor="yellow"
+    
+}
